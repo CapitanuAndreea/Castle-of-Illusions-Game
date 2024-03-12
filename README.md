@@ -1,4 +1,4 @@
-#Castle-of-Illusions
+# Castle of Illusions
 This project contains a **text-based adventure game** (found in **game.py**) that uses concepts of The **Theory of Computation** and an **engine** for:
 * Deterministic Finite Automata (**DFA**)
 * Nondeterministic Finite Automata (**NFA**)
