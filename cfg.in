@@ -1,0 +1,43 @@
+#student: Capitanu Andreea
+#grupa: 143
+
+[Vars]
+COMMAND
+ACTION
+TARGET
+VERB
+OBJECT
+ROOM
+
+[Term]
+go
+take
+drop
+look
+Entrance_Hall
+Dining_Room
+Kitchen
+Armoury
+Treasury
+Library
+Pantry
+Throne_Room
+Wizard's_Study
+Secret_Exit
+key
+invitation
+chef's_hat
+spoon
+sword
+crown
+ancient_coin
+spell_book
+magic_wand
+
+[Rules]
+COMMAND -> ACTION, TARGET
+ACTION -> VERB | VERB, OBJECT
+VERB -> go | take | drop | look
+OBJECT -> key | invitation | chef's_hat | spoon | sword | crown | ancient_coin | spell_book | magic_wand
+TARGET -> ROOM | OBJECT
+ROOM -> Entrance_Hall | Dining_Room | Kitchen | Armoury | Treasury | Library | Pantry | Throne_Room | Wizard's_Study | Secret_Exit

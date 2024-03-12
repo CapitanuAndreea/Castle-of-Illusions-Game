@@ -1,0 +1,54 @@
+#student: Capitanu Andreea
+#grupa: 143
+
+[States]
+Entrance_Hall, S
+Dining_Room
+Kitchen
+Armoury
+Treasury
+Library
+Pantry
+Throne_Room
+Wizard's_Study
+Secret_Exit, F
+
+[Sigma]
+go
+
+[Gamma]
+key
+invitation
+chef's_hat
+spoon
+sword
+crown
+ancient_coin
+spell_book
+magic_wand
+
+[Delta]
+(Entrance_Hall, go, e) -> (Dining_Room, e, e)
+(Dining_Room, go, invitation) -> (Entrance_Hall, e, e)
+(Entrance_Hall, go, key) -> (Armoury, e, e)
+(Armoury, go, e) -> (Entrance_Hall, e, e)
+(Dining_Room, go, chef's_hat) -> (Kitchen, e, e)
+(Kitchen, go, e) -> (Dining_Room, e, e)
+(Dining_Room, go, e) -> (Treasury, e, e)
+(Treasury, go, e) -> (Dining_Room, e, e)
+(Kitchen, go, spoon) -> (Pantry, e, e)
+(Pantry, go, e) -> (Kitchen, e, e)
+(Armoury, go, sword) -> (Treasury, e, e)
+(Treasury, go, e) -> (Armoury, e, e)
+(Armoury, go, crown) -> (Throne_Room, e, e)
+(Throne_Room, go, e) -> (Armoury, e, e)
+(Treasury, go, ancient_coin) -> (Library, e, e)
+(Library, go, e) -> (Treasury, e, e)
+(Treasury, go, e) -> (Wizard's_Study, e, e)
+(Wizard's_Study, go, e) -> (Treasury, e, e)
+(Library, go, e) -> (Secret_Exit, e, e)
+(Secret_Exit, go, e) -> (Library, e, e)
+(Wizard's_Study, go, magic_wand) -> (Secret_Exit, e, e)
+(Secret_Exit, go, e) -> (Wizard's_Study, e, e)
+(Wizard's_Study, go, e) -> (Throne_Room, e, e)
+(Throne_Room, go, e) -> (Wizard's_Study, e, e)

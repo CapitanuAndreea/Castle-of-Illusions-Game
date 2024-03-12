@@ -1,0 +1,22 @@
+[States]
+q1, S
+q2
+q3, F
+q4
+q5
+q6, F
+
+[Sigma]
+0
+1
+e
+
+[Delta]
+q1, 0, q1
+q1, 1, q2
+q2, 1, q3
+q3, e, q1
+q3, e, q4
+q4, 1, q5
+q5, 1, q6
+q6, e, q1
